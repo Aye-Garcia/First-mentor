@@ -1,0 +1,64 @@
+/* -------------------------------------------------------------------------- */
+/*                                   Global                                   */
+/* -------------------------------------------------------------------------- */
+
+/* automatizar las media queries: "user snippets config" 	
+"Create a Media Querie": {
+    "prefix" : "mq",
+    "body" : "@media (min-width: $1) {\n     $2\n}"
+  }
+}*/
+
+
+/*                          Custom property                                   */
+
+:root {
+  --primaryFont: "IBMPlexMono", sans-serif;
+  --secondaryFont: "IBMPlexSans", sans-serif;
+  --primaryColor: #0000ff;
+  --secondaryColor: #0000a3;
+  --colorWhite: #f2f3f4;
+  --colorBlack: #060a24;
+  --buttonPrimaryColor: #0000fe;
+  --buttonSecondaryColor: #00f0b8;
+}
+
+/*                     Padding doesn´t affect the size                        */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--primaryFont);
+  line-height: 1.2;
+}
+
+/*                                 Nice Scroll                                */
+
+html {
+  scroll-snap-type: y mandatory; /* scroll vertical lindo */
+}
+
+.services,
+.main-navegation,
+.form { /* donde debe detenerse el scroll */
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+/* -------------------------------------------------------------------------- */
