@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />                     <!-- ? what does this line do?  -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />                     <!-- ? what does this line do? indicates that the webpage should be displayed in the latest version of IE available --> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>First</title>
+  <title>First landing</title>
   <meta name="description" content="landing page about coding podcasts" />
   <link rel="preload" href="css/normalize.css" ass="style" />                
   <link rel="stylesheet" href="css/normalize.css" />
@@ -26,45 +26,40 @@
       <a href="#interview">Entrevistas</a>
       <a href="#topics">Tópicos</a>
     </nav><!-- end nav -->
-
-    <div class="header-container">
-      <h2>Hello<div class="cross">world</div>
-        <div class="below">pale blue dot.</div>
-      </h2>
-      <div class="header_text">Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves
-        cada 15 días.</div>
-    </div><!-- end container -->
-    <button class="primary_btn">Conocé más</button>
   </header>
+<div class="container">
+  <section class="hero">
+    <div class="hero-wraper">
 
+      <h2>Hello&nbsp;<div class="cross">world</div></h2>
+      <h2>pale blue dot.</h2>
+      
+      <p class="hero-text">Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves
+        cada 15 días.</p>
+    </div><!-- end hero wraper -->
+  </section><!-- end hero -->
+  <button class="primary-btn">Conocé más</button>
+
+  <div class="background">
   <section id="episodes">
     <h3>Episodios</h3>
     <div>
-      <iframe style="border-radius:12px"
-        src="https://open.spotify.com/embed/episode/7AZZy2nJ4R9ZndHW0h2yxt?utm_source=generator" width="100%"
-        height="352" frameBorder="0" allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/2ySVrxGkN6n6frMTo9Nsrt?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    <div>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4kYCRYJ3yK5DQbP5tbfZby?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    <div>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/3cWta1iiQSfvrdHaCbLkSD?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
     <div>
       <iframe style="border-radius:12px"
-        src="https://open.spotify.com/embed/episode/1ezdL2ivAGLwSE6Xbssxqt?utm_source=generator" width="100%"
-        height="352" frameBorder="0" allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
-    <div>
-      <iframe style="border-radius:12px"
-        src="https://open.spotify.com/embed/episode/3cWta1iiQSfvrdHaCbLkSD?utm_source=generator&theme=0" width="100%"
-        height="352" frameBorder="0" allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
-    <div>
-      <iframe style="border-radius:12px"
-        src="https://open.spotify.com/embed/show/2Iibd5A6R7mxkCm4NwNmUn?utm_source=generator" width="100%" height="352"
+        src="https://open.spotify.com/embed/show/2Iibd5A6R7mxkCm4NwNmUn?utm_source=generator" width="100%" height="152"
         frameBorder="0" allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </section>
-
+</div><!-- end background-->
   <section id="us">
     <div>
       <img src="assets/phone.png">
@@ -114,6 +109,7 @@
     <h3>¿Querés las últimas novedades?</h3>
     <button>Escuchá los episodios</button>
   </div>
+</div><!-- end container-->
 </body>
 
 <footer>
