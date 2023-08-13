@@ -80,6 +80,88 @@ html {
   align-items: center;
 }
 
+.menu-close:before {
+  cursor: pointer;
+  padding: 15px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+.menu-icon {
+  cursor: pointer;
+  padding: 15px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.menu-close {
+  font-size: 28px;
+  padding-right: 1rem;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .nav-menu {
+  right: 0;
+}
+
+#menu-toggle:checked ~ .menu-icon {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu-close {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: right 0.3s ease-in-out;
+}
+
+.nav-menu ul {
+  width: 100%;
+  text-align: left;
+  background-color: #321461;
+}
+
+.nav-menu li {
+  margin: 15px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #f1e5e5;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #ff6600;
+}
+
+.menu-close:checked ~ .nav-menu {
+  right: -100%;
+}
+
 /* .hero {
   margin-left: 10%;
 } */
@@ -133,6 +215,7 @@ h2 {
   height: 48px;
   padding: 0;
   font-weight: bold;
+  margin-bottom: 3rem;
 }
 
 #episodes h3 {
@@ -140,16 +223,21 @@ h2 {
   font-weight: lighter;
   color: var(--colorWhite);
   font-size: 36px;
-  margin-bottom: 1rem;
+  padding-top: 3rem;
 }
 
-#episodes :first-child {
+#episodes {
   padding: 0 1rem;
-  margin: 0.15rem 0;
+  transform: skewY(5deg);
 }
 
 .background {
   background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  background-color: #0000a3;
+  background-size: cover;
+  transform: skewY(-5deg);
+  height: 1000px;
+  
 }
 
 #us img {
