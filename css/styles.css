@@ -244,3 +244,122 @@ h2 {
   width: 280px;
   padding-top: 3rem;
 }
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFF;
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.menu-button-container {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+  align-items: center;
+}
+
+/* start crazy effect */
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  background-color: #110202;
+  position: absolute;
+  height: 2px;
+  width: 19px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1); 
+}
+
+.menu-button::before { 
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after { 
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {  
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {  
+  background: rgba(175, 9, 9, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {  
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+/* crazy effect end */
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 700px) {
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      margin-top: 50px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    #menu-toggle ~ .menu li { /* li disappears */
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+ 
+  }
+  #menu-toggle:checked ~ .menu li { /* show li */
+    font-family: var(--secondaryFont);
+    height: 4.5rem;
+    padding: 1.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    width: 100%;
+    background-color: #0000EC;
+    text-transform: uppercase;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #0000EC;
+  }
+  a {
+    color: #FFF;
+  }
+}
