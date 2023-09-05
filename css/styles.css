@@ -112,9 +112,10 @@ p {
 .menu li {
   padding: 20px;
 }
-
-.menu a {
-  color: var(--colorBlack);
+@media (min-width: 768px) {    
+  .menu a {
+    color: var(--colorBlack);
+  }
 }
 
 .menu-button-container {
