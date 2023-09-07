@@ -354,7 +354,10 @@ p {
 /* -------------------------------------------------------------------------- */
 /*                                   US                                       */
 /* -------------------------------------------------------------------------- */
-
+#us {
+  display: grid;
+  place-items: center;
+}
 #us img {
   width: 280px;
   position: relative;
@@ -386,9 +389,6 @@ p {
   #us p {
     width: 35vw;
   }
-  .us_text {
-    padding-top: 8rem;
-  }
   #interview h3 {
     margin-top: 0;
     margin-bottom: 2rem;
@@ -406,9 +406,6 @@ p {
 @media (min-width: 1024px) {
   #us p {
     width: 50vw;
-  }
-  .us_text {
-    padding-top: 10rem;
   }
   #us img {
     place-self: center;
