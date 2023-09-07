@@ -74,6 +74,7 @@ p {
   font-size: 14px;
 }
 
+
 /* -------------------------------------------------------------------------- */
 /*                                        HEADER                              */
 /* -------------------------------------------------------------------------- */
@@ -112,7 +113,7 @@ p {
 .menu li {
   padding: 20px;
 }
-@media (min-width: 768px) {    
+@media (min-width: 768px) {   
   .menu a {
     color: var(--colorBlack);
   }
@@ -123,6 +124,11 @@ p {
   width: 30px;
   cursor: pointer;
   align-items: center;
+}
+@media (min-width: 1024px) {
+     .top-nav {
+      padding: 2rem 5rem;
+     }
 }
 
 /* start crazy effect */
@@ -247,7 +253,6 @@ p {
 .container {
   padding: 0 1rem;
   margin: 0 auto;
-  max-width: 320px;
 }
 
 .logo {
@@ -265,11 +270,11 @@ p {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 500px;
-    margin-left: 140px;
+    margin: o auto;
   }
   .hero {
     align-items: flex-start;
+    padding-left: 5rem;
   }
   .hero-wraper h2 {display:inline-block;}
   .cross {
@@ -284,6 +289,11 @@ p {
   .hero p {
     padding-top: 0;
   }
+}
+@media (min-width: 1024px) {
+     .hero {
+      padding-left: 10rem;
+     }
 }
 
 
@@ -329,6 +339,19 @@ p {
      }
 }
 
+@media (min-width: 1024px) {
+     #episodes h3 {
+      margin: 0;
+     }
+     .background {
+      height: 700px;
+     }
+
+     #episodes {
+      padding-top: 5rem;
+     }
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                   US                                       */
 /* -------------------------------------------------------------------------- */
@@ -350,25 +373,27 @@ p {
 }
 
 @media (min-width: 768px) {
-  .container {
-    margin: 0 5rem;
-  }
   #us {
-    width: 700px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
+    gap: 2rem;
   }
   #us img {
     width: 350px;
     height: 600px;
+    top: -3rem;
+    place-self: end;
+  }
+  #us p {
+    width: 35vw;
   }
   .us_text {
-    padding-top: 4rem;
+    padding-top: 8rem;
   }
    #interview h3 {
     margin-top: 0;
     margin-bottom: 2rem;
+    padding-left: 6rem;
    }  
    .img-wrapper {
     display: grid;
@@ -379,11 +404,30 @@ p {
     height: auto;
    }
 }
-
+@media (min-width: 1024px) {
+  #us p {
+width: 50vw;
+  }
+  .us_text {
+    padding-top: 10rem;
+  }
+  #us img {
+    
+    place-self: center;
+  }
+  #us {
+    padding: 0 5rem;
+  }
+  #interview h3 {
+    padding-left: 12rem;
+  }
+}
 /* -------------------------------------------------------------------------- */
 /*                                   TOPICS                                   */
 /* -------------------------------------------------------------------------- */
-
+#topics h3 {
+  padding-left: 1rem;
+}
 .icons {
   display: flex;
   flex-direction: column;
@@ -437,7 +481,11 @@ p {
 @media (min-width: 768px) {
   #topics {
     width: 80%;
+    height: 350px;
     margin: 0 auto; 
+  }
+  #topics h3 {
+    padding: 2rem;
   }
   .icons-wrapper {
     display: flex;
@@ -455,7 +503,11 @@ p {
     font-size: 14px;
   }
   .news-background {
+    height: 400px;
     padding-top: 4rem;
+  }
+  .news-background h3 {
+    padding-bottom: 1rem;
   }
   .news-background .primary-btn {
     width: 345px;
@@ -468,7 +520,7 @@ p {
 /* -------------------------------------------------------------------------- */
 
 
-footer p {
+.socials p {
   display: flex;
   justify-content: center;
   background-color: #fff;
@@ -477,7 +529,7 @@ footer p {
   padding: 2rem;
 }
 
-.socials {
+.socials_icons {
   display: flex;
   justify-content: space-evenly;
   top: -3rem;
@@ -485,13 +537,30 @@ footer p {
 }
 
 @media (min-width: 768px) {
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .socials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white;
+    top: -4rem;
+    height: 8rem;
+    border-top: 3rem solid white;
+    position: relative;
   }
-  .socials img {
-    padding: 2rem;
-  }
-     
+    .socials_icons {
+      grid-column: 3;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-right: 4rem;
+    } 
+    .socials p {
+      grid-column: 1;
+      padding: 1rem;
+    }
+}
+@media (min-width: 1024px) {
+     .socials {
+      height: 10rem;
+      top: -5rem;
+     }
 }
